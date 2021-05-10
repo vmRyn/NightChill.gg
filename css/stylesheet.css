@@ -61,13 +61,21 @@ input {
     overflow: auto;
 }
 
-.top-right {
+.wrapper {
+    text-align: center;
+}
+
+.button {
     position: absolute;
-    font-size: 40px;
     top: 50%;
-    right: 50%;
-    width: 8em;
-    height: 1.6em;
+}
+
+.top-right {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     text-align: center;
     border: 3px solid green;
     border-radius: 15px;
@@ -158,12 +166,6 @@ input {
     right: 5px;
 }
 
-.hand-light {
-    -webkit-filter: invert(100%);
-    -moz-filter: invert(100%);
-    -ms-filter: invert(100%);
-}
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -226,4 +228,100 @@ svg {
     100% {
         stroke-dashoffset: -35%;
     }
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.show {
+    display: block;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 1000px;
+}
+
+ul {
+    background: #333;
+    min-width: 30px;
+    height: 2657px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px 0 10px 0px;
+    border-bottom: 1px solid #222;
+    transform: translateY(55px);
+    text-align: center;
+    cursor: pointer;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+li.active {
+    background: #222;
+    opacity: 1;
+}
+
+li:not(.active):hover {
+    background: #2c2c2c;
+}
+
+img {
+    width: 30px;
+    opacity: 0.6;
+}
+
+li:hover img,
+.active img {
+    opacity: 1;
 }
