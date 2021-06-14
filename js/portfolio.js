@@ -34,10 +34,10 @@ $('html').on('contextmenu', (event) => {
 
     const handLight = app.skippedIntro ? '' : 'hand-light';
 
-    img.src = 'images/others/hand.png';
-    img.width = 64;
-    img.height = 64;
-    img.alt = 'Shoreline';
+    img.src = 'images/Night.png';
+    img.width = 150;
+    img.height = 100;
+    img.alt = '';
     img.style = `position: absolute; left: ${event.pageX}px; top: ${event.pageY}px; z-index: 10`;
     img.className = `hand ${handLight}`;
 
@@ -94,7 +94,7 @@ $.getJSON(ipgeolocation, (data) => {
 
             clearCursor();
 
-            writeLine([`<i style='color: #F62459'>Shoreline Mafia</i>`], 120, 500, () => {
+            writeLine([`<i style='color: #F62459'>Nightchill.gg</i>`], 120, 500, () => {
                 timeouts.push(
                     setTimeout(() => {
                         if (app.skippedIntro) return;

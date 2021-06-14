@@ -8,6 +8,11 @@ html {
     user-select: none;
 }
 
+* {
+    color: #fff;
+    text-decoration: none;
+}
+
 a {
     color: #e4e3e3;
     text-decoration: none;
